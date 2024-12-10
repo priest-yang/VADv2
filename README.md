@@ -2,6 +2,8 @@
 
 ## Env setup
 
+Refer to [env_install.md](docs/env_install.md)
+
 ## Train & Test
 
 ### Data Preparation

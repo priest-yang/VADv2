@@ -41,7 +41,7 @@ After installing in `/usr/local`, you need to add the CUDA-related paths to the 
 ## Create a Virtual Environment
 
 ```bash
-mkvirtualenv lwad  --python=python3.8
+mkvirtualenv vadv2  --python=python3.8
 ```
 
 ## Set Mirror Source for Best Download Speed
@@ -55,7 +55,7 @@ pip config set global.index-url https://mirrors.bfsu.edu.cn/pypi/web/simple
 
 ```bash
 python -m pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
-python -m pip install ninja packaging
+python -m pip install -r preinstall_requirements.txt
 ```
 
 ## Configure Environment Variables
@@ -65,20 +65,20 @@ export PATH=/usr/bin:$PATH
 export CUDA_HOME=/usr/local/cuda-11.8
 ```
 
-## Install lwad Library
+## Install mmcv Library
 
 Note: It is necessary to compile mmcv on the local machine with `cuda-11.8`, otherwise it will report an error `error in ms_deformable_im2col_cuda: no kernal image is available for execution on the device`
 
 ```bash
-cd lwad && python -m pip install -v -e .
+python -m pip install -v -e .
 ```
 
 ## Download Pre-trained Models
 
-Note: If `lwad/ckpts` already exists, skip this step
+Note: If `ckpts` already exists, skip this step
 
 ```bash
-cd lwad/ckpts
+cd ckpts
 wget https://hf-mirror.com/rethinklab/Bench2DriveZoo/resolve/main/resnet50-19c8e357.pth
 wget https://hf-mirror.com/rethinklab/Bench2DriveZoo/resolve/main/r101_dcn_fcos3d_pretrain.pth
 ```
