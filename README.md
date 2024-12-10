@@ -47,9 +47,11 @@ torchrun --nproc_per_node=1 --master_port=28512 \
 
 ## Open-loop Eval
 
+Nuplan offers ruled-based tags for each driving scenario. 
+
 
 ## Reference
 
-- VAD
-- VADv2
-- Bench2Drive
+- [VAD: Vectorized Scene Representation for Efficient Autonomous Driving](https://github.com/hustvl/VAD?tab=readme-ov-file)
+- [VADv2: End-to-End Vectorized Autonomous Driving via Probabilistic Planning](https://hgao-cv.github.io/VADv2/)
+- [ThinkLab@SJTU: Bench2Drive Zoo](https://github.com/Thinklab-SJTU/Bench2DriveZoo)
