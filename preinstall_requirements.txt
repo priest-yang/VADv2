@@ -1,0 +1,43 @@
+torch
+torchvision
+torchaudio
+ninja
+cython
+addict
+packaging
+Pillow
+matplotlib
+prettytable
+six
+terminaltables
+lyft_dataset_sdk
+scikit-image
+tensorboard
+cityscapesscripts
+imagecorruptions
+scipy
+scikit-learn
+networkx
+ipython
+opencv-python==4.8.0.74
+seaborn
+einops
+casadi
+torchmetrics
+trimesh
+pytest
+pytest-cov
+pytest-runner
+flake8
+similaritymeasures
+py-trees
+simple_watchdog_timer
+transforms3d
+tabulate
+ephem
+dictor
+open3d
+regex; sys_platform=='win32'
+pycocotools; platform_system == 'Linux'
+pycocotools-windows; platform_system == 'Windows'
+

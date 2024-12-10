@@ -1,0 +1,73 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "VAD train",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "torch.distributed.launch",
+            "args": [
+                "--nproc_per_node=2",
+                "--master_port=28510",
+                "./lwad/adbase/vad/train.py",
+                "./lwad/adbase/vad/configs/VAD/VAD_lightwheel_config.py",
+                "--launcher=pytorch",
+                "--deterministic"
+            ],
+            "justMyCode": false
+        }, 
+        {
+            "name": "VAD test",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "torch.distributed.launch",
+            "args": [
+                "--nproc_per_node=1",
+                "--master_port=29503",
+                "./lwad/adbase/vad/test.py",
+                "./lwad/adbase/vad/configs/VAD/VAD_lightwheel_config.py",
+                "/data/nas/main/models/e2e_ad/vad/h800_vad_new.pth",
+                "--launcher=pytorch",
+                "--eval=bbox"
+            ]
+        },
+        {
+            "name": "VADv2 train",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "torch.distributed.launch",
+            "args": [
+                "--nproc_per_node=8",
+                "--master_port=28510",
+                "./lwad/adbase/vad/train.py",
+                "./lwad/adbase/vad/configs/VAD/VADv2_config_voca4096_h800_1127.py",
+                "--launcher=pytorch",
+                "--deterministic"
+            ],
+            "justMyCode": false, 
+            "env": {
+                "TORCH_DISTRIBUTED_DEBUG": "DETAIL", 
+                "find_unused_parameters": "True"
+            }
+        },
+        {
+            "name": "VADv2 test",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "torch.distributed.launch",
+            "args": [
+                "--nproc_per_node=1",
+                "--master_port=28512",
+                "./lwad/adbase/vad/test.py",
+                "./lwad/adbase/vad/configs/VAD/VADv2_config_voca4096_h800_1127.py",
+                "work_dirs/VADv2_config_voca4096_h800_1127/latest.pth",
+                "--launcher=pytorch",
+                "--eval=bbox"
+            ]
+        }, 
+
+    ]
+}
