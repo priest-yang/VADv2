@@ -12,8 +12,8 @@
             "args": [
                 "--nproc_per_node=2",
                 "--master_port=28510",
-                "./lwad/adbase/vad/train.py",
-                "./lwad/adbase/vad/configs/VAD/VAD_lightwheel_config.py",
+                "./adzoo/vad/train.py",
+                "./adzoo/vad/configs/VAD/VAD_baseline_config.py",
                 "--launcher=pytorch",
                 "--deterministic"
             ],
@@ -27,8 +27,8 @@
             "args": [
                 "--nproc_per_node=1",
                 "--master_port=29503",
-                "./lwad/adbase/vad/test.py",
-                "./lwad/adbase/vad/configs/VAD/VAD_lightwheel_config.py",
+                "./adzoo/vad/test.py",
+                "./adzoo/vad/configs/VAD/VAD_baseline_config.py",
                 "/data/nas/main/models/e2e_ad/vad/h800_vad_new.pth",
                 "--launcher=pytorch",
                 "--eval=bbox"
@@ -42,8 +42,8 @@
             "args": [
                 "--nproc_per_node=8",
                 "--master_port=28510",
-                "./lwad/adbase/vad/train.py",
-                "./lwad/adbase/vad/configs/VAD/VADv2_config_voca4096_h800_1127.py",
+                "./adzoo/vad/train.py",
+                "./adzoo/vad/configs/VAD/VADv2_voca4096_config.py",
                 "--launcher=pytorch",
                 "--deterministic"
             ],
@@ -61,9 +61,9 @@
             "args": [
                 "--nproc_per_node=1",
                 "--master_port=28512",
-                "./lwad/adbase/vad/test.py",
-                "./lwad/adbase/vad/configs/VAD/VADv2_config_voca4096_h800_1127.py",
-                "work_dirs/VADv2_config_voca4096_h800_1127/latest.pth",
+                "./adzoo/vad/test.py",
+                "./adzoo/vad/configs/VAD/VADv2_voca4096_config.py",
+                "work_dirs/VADv2_voca4096_config/latest.pth",
                 "--launcher=pytorch",
                 "--eval=bbox"
             ]
