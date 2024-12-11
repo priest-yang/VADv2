@@ -29,9 +29,9 @@ from tqdm import tqdm
 import argparse
 def parse_args():
     parser = argparse.ArgumentParser(description='')  
-    parser.add_argument('--data_root', type=str, help='Data root path', default='/data/ceph/data/nuplan/dataset')
-    parser.add_argument('--pkl_path', type=str, help='Pickle file path', default='/data/ceph/data/nuplan/ann_files/test/sampled_test_300.pkl')
-    parser.add_argument('--save_path', type=str, help='Save path', default='/data/ceph/data/nuplan/ann_files/test/eval_map.json')
+    parser.add_argument('--data_root', type=str, help='Data root path', default='/data/nuplan/dataset')
+    parser.add_argument('--pkl_path', type=str, help='Pickle file path', default='/data/nuplan/ann_files/test/sampled_test_300.pkl')
+    parser.add_argument('--save_path', type=str, help='Save path', default='/data/nuplan/ann_files/test/eval_map.json')
     args = parser.parse_args()
     return args
 
