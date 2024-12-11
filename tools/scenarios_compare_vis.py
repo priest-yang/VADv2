@@ -20,7 +20,6 @@ EVAL_METRICS = [
 # metrics that are better when smaller
 REVERSE_EVAL_METRICS = set(
     [
-    'hit_car', 'hit_pedestrian',
     'fp_car', 'fp_pedestrian', 
     'plan_L2_1s', 'plan_L2_2s', 'plan_L2_3s', 'plan_obj_col_1s', 
     'plan_obj_col_2s', 'plan_obj_col_3s', 'plan_obj_box_col_1s', 
