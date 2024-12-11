@@ -5,18 +5,23 @@ import argparse
 from collections import defaultdict
 from joblib import Parallel, delayed
 
-EVAL_METRICS = ['cnt_ade_car', 'cnt_ade_pedestrian', 
-                'cnt_fde_car', 'cnt_fde_pedestrian',  
-                'fp_car', 'fp_pedestrian', 'ADE_car', 'ADE_pedestrian', 
-                'FDE_car', 'FDE_pedestrian', 'MR_car', 'MR_pedestrian',
-                'hit_car', 'hit_pedestrian',  
-                'plan_L2_1s', 'plan_L2_2s', 'plan_L2_3s', 'plan_obj_col_1s', 
-                'plan_obj_col_2s', 'plan_obj_col_3s', 'plan_obj_box_col_1s', 
-                'plan_obj_box_col_2s', 'plan_obj_box_col_3s', ]
+EVAL_METRICS = [
+    # 'cnt_ade_car', 'cnt_ade_pedestrian', 
+    # 'cnt_fde_car', 'cnt_fde_pedestrian',  
+    'fp_car', 'fp_pedestrian', 'ADE_car', 'ADE_pedestrian', 
+    'FDE_car', 'FDE_pedestrian', 
+    # 'MR_car', 'MR_pedestrian',
+    # 'hit_car', 'hit_pedestrian',  
+    'plan_L2_1s', 'plan_L2_2s', 'plan_L2_3s', 'plan_obj_col_1s', 
+    'plan_obj_col_2s', 'plan_obj_col_3s', 'plan_obj_box_col_1s', 
+    'plan_obj_box_col_2s', 'plan_obj_box_col_3s', 
+    ]
 
 # metrics that are better when smaller
 REVERSE_EVAL_METRICS = set(
-    ['hit_car', 'hit_pedestrian',
+    [
+    'hit_car', 'hit_pedestrian',
+    'fp_car', 'fp_pedestrian', 
     'plan_L2_1s', 'plan_L2_2s', 'plan_L2_3s', 'plan_obj_col_1s', 
     'plan_obj_col_2s', 'plan_obj_col_3s', 'plan_obj_box_col_1s', 
     'plan_obj_box_col_2s', 'plan_obj_box_col_3s', 
