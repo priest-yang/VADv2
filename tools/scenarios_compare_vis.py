@@ -36,7 +36,7 @@ def extract_subpath(full_path, keyword, default_value=None):
 def parse_args():
     parser = argparse.ArgumentParser(
         description='Visualize evaluation indicators for different scenarios')
-    parser.add_argument('--dir_baseline', help='directory path to store baseline jsons', default="test/scenario_test/VAD_baseline_1013")
+    parser.add_argument('--dir_baseline', help='directory path to store baseline jsons', default="test/scenario_test/VAD_baseline")
     parser.add_argument('--dir_exp', help='directory path to store experiment jsons')
     parser.add_argument('--save_image_dir', help='path to save the plot image', default="test/scenario_compare")
     parser.add_argument('--eval_metrics', type=str, help='Evaluation metrics to be compared')

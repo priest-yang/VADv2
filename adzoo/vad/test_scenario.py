@@ -5,6 +5,7 @@ import time
 from datetime import datetime
 import shutil
 import json
+from collections import defaultdict
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Redirect ann_file_test(map)')
