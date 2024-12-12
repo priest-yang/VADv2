@@ -1,8 +1,6 @@
 # VADv2
 
-## Env setup
-
-Refer to [env_install.md](docs/env_install.md)
+## [Env Setup](docs/env_install.md)
 
 ## Train & Test
 
@@ -196,7 +194,10 @@ Note: For certain metrics (such as L2 distance, collision metrics), lower values
 Output images will be saved in the specified `save_image_dir` directory with filename format `{metric_name}_comparison.png`.
 
 
+## Coming Soon
 
+- Add Traffic Light Detector, as well as comparison results.
+- Add Data converter and visualizer for Nuplan Dataset 
 
 
 ## Reference
