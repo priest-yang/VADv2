@@ -983,7 +983,9 @@ class v116ADTRHead(DETRHead):
             else:
                 used_index[-1] = best_match_idx
 
-        self.used_plan_anchors = torch.index_select(self.plan_anchors.to(mot_hs.device), 0, used_index)
+            self.used_plan_anchors = torch.index_select(self.plan_anchors.to(mot_hs.device), 0, used_index)
+        else:
+            self.used_plan_anchors = self.plan_anchors.to(mot_hs.device)
 
 
         # set stop traj to zero

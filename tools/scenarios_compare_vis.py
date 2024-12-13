@@ -12,9 +12,9 @@ EVAL_METRICS = [
     'FDE_car', 'FDE_pedestrian', 
     # 'MR_car', 'MR_pedestrian',
     # 'hit_car', 'hit_pedestrian',  
-    'plan_L2_1s', 'plan_L2_2s', 'plan_L2_3s', 'plan_obj_col_1s', 
-    'plan_obj_col_2s', 'plan_obj_col_3s', 'plan_obj_box_col_1s', 
-    'plan_obj_box_col_2s', 'plan_obj_box_col_3s', 
+    'plan_L2_1s', 'plan_L2_2s', 'plan_L2_3s', 
+    'plan_obj_col_1s', 'plan_obj_col_2s', 'plan_obj_col_3s', 
+    'plan_obj_box_col_1s', 'plan_obj_box_col_2s', 'plan_obj_box_col_3s', 
     ]
 
 # metrics that are better when smaller
