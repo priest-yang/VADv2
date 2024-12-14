@@ -1,8 +1,24 @@
 # VADv2
 
 <p align="center">
-<img src="docs/asset/vis_vadv2.gif" alt="VADv2" width="800">
+    <video width="600" autoplay loop muted playsinline>
+    <source src="docs/asset/VADv2.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+    </video>
 </p>
+<p align="center">
+    Demo
+</p>
+
+
+<p align="center">
+    <img src="docs/asset/frameworkv2_00.png" alt="Framework" width="600">
+</p>
+<p align="center">
+    Model Framework
+</p>
+
+
 
 ## [Env Setup](docs/env_install.md)
 
