@@ -1,5 +1,9 @@
 # VADv2
 
+<p align="center">
+<img src="docs/asset/vis_vadv2.gif" alt="VADv2" width="800">
+</p>
+
 ## [Env Setup](docs/env_install.md)
 
 ## Train & Test
