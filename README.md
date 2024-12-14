@@ -1,10 +1,13 @@
 # VADv2
 
 <p align="center">
-    <video width="600" autoplay loop muted playsinline>
+    <!-- <video width="600" autoplay loop muted playsinline>
     <source src="docs/asset/VADv2.mp4" type="video/mp4">
     Your browser does not support the video tag.
-    </video>
+    </video> -->
+
+<img src="docs/asset/VADv2.gif" alt="description" width="600">
+
 </p>
 <p align="center">
     Demo
