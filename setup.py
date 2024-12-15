@@ -186,6 +186,7 @@ setup(
     packages=[
         *find_packages(include=('mmcv', "mmcv.*")), 
         *find_packages(include=('adzoo', "adzoo.*")), 
+        *find_packages(where="./mmcv/", include=('nuscenes', "nuscenes.*"))
     ],
     include_package_data=True,
     classifiers=[
