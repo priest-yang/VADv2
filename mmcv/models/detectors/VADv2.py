@@ -547,11 +547,10 @@ class VADv2(MVXTwoStageDetector):
             bbox_result['trajs_cls'] = trajs_cls.cpu()
             map_bbox_result = self.map_pred2result(map_bboxes, map_scores, map_labels, map_pts)
             bbox_result.update(map_bbox_result)
-            bbox_result['ego_fut_preds'] = outs['ego_fut_preds'][i].cpu()
-            bbox_result['ego_cls_expert_preds'] = outs['ego_cls_expert_preds'][i].cpu()
+            bbox_result['ego_fut_preds_all'] = outs['ego_fut_preds'][i].cpu() # Num_traj_clusters * ts * 2
+            bbox_result['ego_cls_expert_preds'] = outs['ego_cls_expert_preds'][i].cpu() # Num_traj_clusters * 1 (score)
 
-            
-            bbox_result['ego_fut_preds'] = bbox_result['ego_fut_preds'][torch.argmax(bbox_result['ego_cls_expert_preds']).cpu()]
+            bbox_result['ego_fut_preds'] = bbox_result['ego_fut_preds_all'][torch.argmax(bbox_result['ego_cls_expert_preds']).cpu()]
 
             bbox_result['ego_fut_cmd'] = ego_fut_cmd.cpu()
             bbox_results.append(bbox_result)

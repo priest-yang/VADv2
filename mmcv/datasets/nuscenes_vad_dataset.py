@@ -1683,7 +1683,12 @@ class VADCustomNuScenesDataset(NuScenesDataset):
             boxes = output_to_nusc_box(det)
             sample_token = self.data_infos[sample_id]["token"]
 
-            plan_annos[sample_token] = [det["ego_fut_preds"], det["ego_fut_cmd"]]
+            if 'ego_cls_expert_preds' in det:
+                if 'ego_fut_cmd' not in det:
+                    det['ego_fut_cmd'] = np.array([0, 1, 0])
+                plan_annos[sample_token] = [det["ego_fut_preds"], det["ego_cls_expert_preds"], det['ego_fut_preds_all'], det['ego_fut_cmd']]
+            else:
+                plan_annos[sample_token] = [det["ego_fut_preds"], det["ego_fut_cmd"]]
 
             # boxes = lidar_nusc_box_to_global(self.data_infos[sample_id], boxes,
             #                                  det_mapped_class_names,
