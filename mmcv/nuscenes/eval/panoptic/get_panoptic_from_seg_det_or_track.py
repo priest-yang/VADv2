@@ -10,15 +10,15 @@ from typing import List, Tuple, Union
 import numpy as np
 from tqdm import tqdm
 
-from nuscenes.eval.common.loaders import load_prediction, add_center_dist
-from nuscenes.eval.common.utils import boxes_to_sensor
-from nuscenes.eval.detection.data_classes import DetectionBox
-from nuscenes.eval.lidarseg.utils import get_samples_in_eval_set
-from nuscenes.eval.panoptic.utils import PanopticClassMapper
-from nuscenes.eval.tracking.data_classes import TrackingBox
-from nuscenes.nuscenes import NuScenes
-from nuscenes.utils.data_classes import LidarSegPointCloud
-from nuscenes.utils.geometry_utils import points_in_box
+from mmcv.nuscenes.eval.common.loaders import load_prediction, add_center_dist
+from mmcv.nuscenes.eval.common.utils import boxes_to_sensor
+from mmcv.nuscenes.eval.detection.data_classes import DetectionBox
+from mmcv.nuscenes.eval.lidarseg.utils import get_samples_in_eval_set
+from mmcv.nuscenes.eval.panoptic.utils import PanopticClassMapper
+from mmcv.nuscenes.eval.tracking.data_classes import TrackingBox
+from mmcv.nuscenes.nuscenes import NuScenes
+from mmcv.nuscenes.utils.data_classes import LidarSegPointCloud
+from mmcv.nuscenes.utils.geometry_utils import points_in_box
 
 
 OVERLAP_THRESHOLD = 0.5  # Amount by which an instance can overlap with other instances, before it is discarded.

@@ -6,10 +6,10 @@ import matplotlib.ticker as mticker
 import matplotlib.transforms as mtrans
 import numpy as np
 
-from nuscenes import NuScenes
-from nuscenes.panoptic.panoptic_utils import get_frame_panoptic_instances, get_panoptic_instances_stats
-from nuscenes.utils.color_map import get_colormap
-from nuscenes.utils.data_io import load_bin_file
+from mmcv.nuscenes import NuScenes
+from mmcv.nuscenes.panoptic.panoptic_utils import get_frame_panoptic_instances, get_panoptic_instances_stats
+from mmcv.nuscenes.utils.color_map import get_colormap
+from mmcv.nuscenes.utils.data_io import load_bin_file
 
 
 def truncate_class_name(class_name: str) -> str:

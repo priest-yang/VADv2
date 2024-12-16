@@ -1,6 +1,6 @@
 import numpy as np
-from nuscenes.map_expansion.map_api import NuScenesMap, NuScenesMapExplorer
-from nuscenes.eval.common.utils import quaternion_yaw, Quaternion
+from mmcv.nuscenes.map_expansion.map_api import NuScenesMap, NuScenesMapExplorer
+from mmcv.nuscenes.eval.common.utils import quaternion_yaw, Quaternion
 from shapely import affinity, ops
 from shapely.geometry import LineString, box, MultiPolygon, MultiLineString
 

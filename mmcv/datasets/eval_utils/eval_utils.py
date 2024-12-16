@@ -2,18 +2,18 @@ import json
 import torch
 import tqdm
 from typing import List, Dict, Tuple, Callable, Union
-from nuscenes import NuScenes
+from mmcv.nuscenes import NuScenes
 from pyquaternion import Quaternion
 import numpy as np
 from .metric_utils import min_ade, min_fde, miss_rate
 
-from nuscenes.utils.splits import create_splits_scenes
-from nuscenes.eval.detection.utils import category_to_detection_name
-from nuscenes.prediction import PredictHelper, convert_local_coords_to_global
-from nuscenes.eval.common.data_classes import EvalBox, EvalBoxes
-from nuscenes.eval.detection.data_classes import DetectionBox
-from nuscenes.eval.detection.data_classes import DetectionMetricData, DetectionMetricDataList, DetectionMetrics
-from nuscenes.eval.common.utils import center_distance, scale_iou, yaw_diff, velocity_l2, attr_acc, cummean
+from mmcv.nuscenes.utils.splits import create_splits_scenes
+from mmcv.nuscenes.eval.detection.utils import category_to_detection_name
+from mmcv.nuscenes.prediction import PredictHelper, convert_local_coords_to_global
+from mmcv.nuscenes.eval.common.data_classes import EvalBox, EvalBoxes
+from mmcv.nuscenes.eval.detection.data_classes import DetectionBox
+from mmcv.nuscenes.eval.detection.data_classes import DetectionMetricData, DetectionMetricDataList, DetectionMetrics
+from mmcv.nuscenes.eval.common.utils import center_distance, scale_iou, yaw_diff, velocity_l2, attr_acc, cummean
 
 def category_to_motion_name(category_name: str):
     """

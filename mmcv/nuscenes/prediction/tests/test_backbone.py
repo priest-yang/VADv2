@@ -6,7 +6,7 @@ try:
 except ModuleNotFoundError:
     raise unittest.SkipTest('Skipping test as torch was not found!')
 
-from nuscenes.prediction.models.backbone import ResNetBackbone, MobileNetBackbone
+from mmcv.nuscenes.prediction.models.backbone import ResNetBackbone, MobileNetBackbone
 
 
 class TestBackBones(unittest.TestCase):

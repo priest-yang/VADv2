@@ -4,8 +4,8 @@ Code written by Motional and the Robot Learning Lab, University of Freiburg.
 """
 from typing import Dict
 
-from nuscenes.eval.lidarseg.utils import LidarsegClassMapper, get_samples_in_eval_set
-from nuscenes.nuscenes import NuScenes
+from mmcv.nuscenes.eval.lidarseg.utils import LidarsegClassMapper, get_samples_in_eval_set
+from mmcv.nuscenes.nuscenes import NuScenes
 
 get_samples_in_panoptic_eval_set = get_samples_in_eval_set
 

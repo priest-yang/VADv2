@@ -11,12 +11,12 @@ from typing import Dict
 import numpy as np
 from tqdm import tqdm
 
-from nuscenes import NuScenes
-from nuscenes.eval.common.config import config_factory
-from nuscenes.eval.detection.constants import DETECTION_NAMES
-from nuscenes.eval.detection.evaluate import DetectionEval
-from nuscenes.eval.detection.utils import category_to_detection_name, detection_name_to_rel_attributes
-from nuscenes.utils.splits import create_splits_scenes
+from mmcv.nuscenes import NuScenes
+from mmcv.nuscenes.eval.common.config import config_factory
+from mmcv.nuscenes.eval.detection.constants import DETECTION_NAMES
+from mmcv.nuscenes.eval.detection.evaluate import DetectionEval
+from mmcv.nuscenes.eval.detection.utils import category_to_detection_name, detection_name_to_rel_attributes
+from mmcv.nuscenes.utils.splits import create_splits_scenes
 
 
 class TestMain(unittest.TestCase):

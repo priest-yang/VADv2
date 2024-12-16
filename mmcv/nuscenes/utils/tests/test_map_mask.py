@@ -7,7 +7,7 @@ import unittest
 import cv2
 import numpy as np
 
-from nuscenes.utils.map_mask import MapMask
+from mmcv.nuscenes.utils.map_mask import MapMask
 
 
 class TestLoad(unittest.TestCase):

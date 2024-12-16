@@ -14,13 +14,13 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib import rcParams
 from pyquaternion import Quaternion
-from nuscenes.nuscenes import NuScenes
+from mmcv.nuscenes.nuscenes import NuScenes
 from mmdet.datasets.pipelines import to_tensor
 from matplotlib.collections import LineCollection
-from nuscenes.utils.data_classes import LidarPointCloud, Box
-from nuscenes.eval.common.data_classes import EvalBoxes, EvalBox
-from nuscenes.eval.detection.utils import category_to_detection_name
-from nuscenes.utils.geometry_utils import view_points, box_in_image, BoxVisibility
+from mmcv.nuscenes.utils.data_classes import LidarPointCloud, Box
+from mmcv.nuscenes.eval.common.data_classes import EvalBoxes, EvalBox
+from mmcv.nuscenes.eval.detection.utils import category_to_detection_name
+from mmcv.nuscenes.utils.geometry_utils import view_points, box_in_image, BoxVisibility
 
 from projects.mmdet3d_plugin.core.bbox.structures.nuscenes_box import CustomNuscenesBox, CustomDetectionBox, color_map
 from projects.mmdet3d_plugin.datasets.nuscenes_vad_dataset import VectorizedLocalMap, LiDARInstanceLines

@@ -30,33 +30,24 @@ num_classes = len(class_names)
 map_classes = ['divider', 'ped_crossing', 'boundary']
 
 plan_fut_mode = 4096
-plan_anchors_path = "/data/ceph/data/nuplan/dataset/traj_clustering/4096/cluster_centers_ori.npy"
+plan_anchors_path = "data/traj_clusters/4096/cluster_centers_ori.npy"
 
-data_root = "/data/ceph/data/nuplan/dataset"
+data_root = "data/sample_data/nuplan/dataset"
 # local_path: Optional, local path for images to speed up loading.
 # load images from local_path+img_info['filename'] if local_path is not None.
 # local_path = "/data/ceph/"
 
-# # meta data paths:
-# ann_file_train = "/data/ceph/data/nuplan/dataset/trainval_1127.db"
-# ann_file_test = "/data/ceph/data/nuplan/dataset/test_100.pkl"
-# ann_file_map = "/data/ceph/data/nuplan/dataset/eval_map.json"
-
 # sample data########################
-local_path = "/data/ceph/"
-ann_file_train = "/data/ceph/data/nuplan/ann_files/trainval_1127.db"
-ann_file_test = "tools/vis_tools/demo/gt_sampled_300.pkl"
-ann_file_map = "tools/vis_tools/demo/gt_sampled_300_map.json"
+local_path = "data/sample_data/nuplan/dataset/"
+ann_file_train = "data/sample_data/sample_ann.pkl"
+ann_file_test = "data/sample_data/sample_ann.pkl"
+ann_file_map = "data/sample_data/eval_map.json"
 #####################################
+
+# load_from = 'v116_datav18_q12_15000.pth' #'samplingnotlanefollow_iter_40000.pth' #'default_ckpt.pth'
+# resume_from = 'work_dirs/VADv2_config_voca4096_h800_1205/latest.pth'
+
 no_validate = True
-
-
-meta_actions = [
-"RIGHT", #: np.array([1, 0, 0]),
-"LEFT", #: np.array([0, 1, 0]),
-"FORWARD", #: np.array([0, 0, 1]),
-]
-
 find_unused_parameters = True
 
 # fixed_ptsnum_per_line = 20
@@ -488,7 +479,7 @@ test_pipeline = [
 ]
 
 data = dict(
-    samples_per_gpu=5,
+    samples_per_gpu=1,
     workers_per_gpu=10,
     train=dict(
         type=dataset_type,
@@ -562,10 +553,6 @@ lr_config = dict(
 
 # runner = dict(type='EpochBasedRunner', max_epochs=total_epochs)
 runner = dict(type='EpochBasedRunner', max_epochs=total_epochs)
-
-# load_from = 'ckpts/v0cPIPP_m_sr_20pts_pp_pretrain_e4.pth'
-# load_from = 'v116_datav18_q12_15000.pth' #'samplingnotlanefollow_iter_40000.pth' #'default_ckpt.pth'
-resume_from = 'work_dirs/VADv2_config_voca4096_h800_1205/latest.pth'
 
 log_config = dict(
     interval=1,

@@ -7,9 +7,9 @@ from unittest.mock import MagicMock
 import cv2
 import numpy as np
 
-from nuscenes.prediction import PredictHelper
-from nuscenes.prediction.helper import make_2d_rotation_matrix
-from nuscenes.prediction.input_representation import agents
+from mmcv.nuscenes.prediction import PredictHelper
+from mmcv.nuscenes.prediction.helper import make_2d_rotation_matrix
+from mmcv.nuscenes.prediction.input_representation import agents
 
 
 class Test_get_track_box(unittest.TestCase):

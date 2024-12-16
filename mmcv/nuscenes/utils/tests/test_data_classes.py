@@ -4,8 +4,8 @@
 import os
 import unittest
 
-from nuscenes import NuScenes
-from nuscenes.utils.data_classes import LidarPointCloud, RadarPointCloud
+from mmcv.nuscenes import NuScenes
+from mmcv.nuscenes.utils.data_classes import LidarPointCloud, RadarPointCloud
 
 
 class TestDataClasses(unittest.TestCase):

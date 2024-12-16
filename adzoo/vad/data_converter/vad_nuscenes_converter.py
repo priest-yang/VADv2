@@ -9,13 +9,13 @@ from typing import List, Tuple, Union
 import mmcv
 import numpy as np
 from pyquaternion import Quaternion
-from nuscenes.nuscenes import NuScenes
-from nuscenes.utils.data_classes import Box
+from mmcv.nuscenes.nuscenes import NuScenes
+from mmcv.nuscenes.utils.data_classes import Box
 from shapely.geometry import MultiPoint, box
 from mmdet3d.datasets import NuScenesDataset
-from nuscenes.utils.geometry_utils import view_points
+from mmcv.nuscenes.utils.geometry_utils import view_points
 from mmdet3d.core.bbox.box_np_ops import points_cam2img
-from nuscenes.utils.geometry_utils import transform_matrix
+from mmcv.nuscenes.utils.geometry_utils import transform_matrix
 
 
 nus_categories = ('car', 'truck', 'trailer', 'bus', 'construction_vehicle',
@@ -61,12 +61,12 @@ def create_nuscenes_infos(root_path,
         max_sweeps (int): Max number of sweeps.
             Default: 10
     """
-    from nuscenes.nuscenes import NuScenes
-    from nuscenes.can_bus.can_bus_api import NuScenesCanBus
+    from mmcv.nuscenes.nuscenes import NuScenes
+    from mmcv.nuscenes.can_bus.can_bus_api import NuScenesCanBus
     print(version, root_path)
     nusc = NuScenes(version=version, dataroot=root_path, verbose=True)
     nusc_can_bus = NuScenesCanBus(dataroot=can_bus_root_path)
-    from nuscenes.utils import splits
+    from mmcv.nuscenes.utils import splits
     available_vers = ['v1.0-trainval', 'v1.0-test', 'v1.0-mini']
     assert version in available_vers
     if version == 'v1.0-trainval':

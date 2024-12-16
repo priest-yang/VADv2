@@ -2,7 +2,7 @@ import unittest
 
 import numpy as np
 
-from nuscenes.eval.prediction.data_classes import Prediction
+from mmcv.nuscenes.eval.prediction.data_classes import Prediction
 
 
 class TestPrediction(unittest.TestCase):

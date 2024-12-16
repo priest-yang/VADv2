@@ -12,19 +12,19 @@ import mmcv
 from os import path as osp
 import torch
 import numpy as np
-from nuscenes.eval.common.utils import quaternion_yaw, Quaternion
-from nuscenes.eval.common.utils import center_distance
+from mmcv.nuscenes.eval.common.utils import quaternion_yaw, Quaternion
+from mmcv.nuscenes.eval.common.utils import center_distance
 from mmcv.utils.visual import save_tensor
 from mmcv.parallel import DataContainer as DC
 import random
 from mmcv.core.bbox.structures.lidar_box3d import LiDARInstance3DBoxes
-from nuscenes.utils.data_classes import Box as NuScenesBox
+from mmcv.nuscenes.utils.data_classes import Box as NuScenesBox
 from mmcv.core.bbox.structures.nuscenes_box import CustomNuscenesBox
 from shapely import affinity, ops
 from shapely.geometry import LineString, box, MultiPolygon, MultiLineString
 from mmcv.datasets.pipelines import to_tensor
-from nuscenes.map_expansion.map_api import NuScenesMap, NuScenesMapExplorer
-from nuscenes.eval.detection.constants import DETECTION_NAMES
+from mmcv.nuscenes.map_expansion.map_api import NuScenesMap, NuScenesMapExplorer
+from mmcv.nuscenes.eval.detection.constants import DETECTION_NAMES
 
 import numpy as np
 import torch

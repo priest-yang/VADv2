@@ -1,7 +1,7 @@
 from typing import List, Dict, Set
 
-from nuscenes.map_expansion.map_api import NuScenesMap
-from nuscenes.nuscenes import NuScenes
+from mmcv.nuscenes.map_expansion.map_api import NuScenesMap
+from mmcv.nuscenes.nuscenes import NuScenes
 
 
 def get_egoposes_on_drivable_ratio(nusc: NuScenes, nusc_map: NuScenesMap, scene_token: str) -> float:

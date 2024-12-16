@@ -10,8 +10,8 @@ try:
 except ModuleNotFoundError:
     raise unittest.SkipTest('Skipping test as torch was not found!')
 
-from nuscenes.prediction.models.backbone import ResNetBackbone
-from nuscenes.prediction.models.covernet import mean_pointwise_l2_distance, ConstantLatticeLoss, CoverNet
+from mmcv.nuscenes.prediction.models.backbone import ResNetBackbone
+from mmcv.nuscenes.prediction.models.covernet import mean_pointwise_l2_distance, ConstantLatticeLoss, CoverNet
 
 
 class TestCoverNet(unittest.TestCase):

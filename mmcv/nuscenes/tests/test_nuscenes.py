@@ -4,7 +4,7 @@
 import os
 import unittest
 
-from nuscenes import NuScenes
+from mmcv.nuscenes import NuScenes
 
 
 class TestNuScenes(unittest.TestCase):

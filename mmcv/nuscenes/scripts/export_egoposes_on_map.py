@@ -11,7 +11,7 @@ import os
 import matplotlib.pyplot as plt
 import numpy as np
 
-from nuscenes import NuScenes
+from mmcv.nuscenes import NuScenes
 
 
 def export_ego_poses(nusc: NuScenes, out_dir: str):

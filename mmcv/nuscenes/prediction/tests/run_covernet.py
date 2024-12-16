@@ -13,8 +13,8 @@ import torch
 import torch.optim as optim
 from torch.utils.data import DataLoader, IterableDataset
 
-from nuscenes.prediction.models.backbone import MobileNetBackbone
-from nuscenes.prediction.models.covernet import CoverNet, ConstantLatticeLoss
+from mmcv.nuscenes.prediction.models.backbone import MobileNetBackbone
+from mmcv.nuscenes.prediction.models.covernet import CoverNet, ConstantLatticeLoss
 
 
 def generate_trajectory(theta: float) -> torch.Tensor:

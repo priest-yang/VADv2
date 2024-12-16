@@ -5,9 +5,9 @@ from typing import Dict
 
 from tqdm import tqdm
 
-from nuscenes import NuScenes
-from nuscenes.eval.lidarseg.utils import ConfusionMatrix, LidarsegClassMapper, get_samples_in_eval_set
-from nuscenes.utils.data_io import load_bin_file
+from mmcv.nuscenes import NuScenes
+from mmcv.nuscenes.eval.lidarseg.utils import ConfusionMatrix, LidarsegClassMapper, get_samples_in_eval_set
+from mmcv.nuscenes.utils.data_io import load_bin_file
 
 
 class LidarSegEval:

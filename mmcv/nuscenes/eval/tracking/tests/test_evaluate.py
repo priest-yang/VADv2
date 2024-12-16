@@ -12,11 +12,11 @@ from typing import Dict, Optional, Any
 import numpy as np
 from tqdm import tqdm
 
-from nuscenes import NuScenes
-from nuscenes.eval.common.config import config_factory
-from nuscenes.eval.tracking.evaluate import TrackingEval
-from nuscenes.eval.tracking.utils import category_to_tracking_name
-from nuscenes.utils.splits import create_splits_scenes
+from mmcv.nuscenes import NuScenes
+from mmcv.nuscenes.eval.common.config import config_factory
+from mmcv.nuscenes.eval.tracking.evaluate import TrackingEval
+from mmcv.nuscenes.eval.tracking.utils import category_to_tracking_name
+from mmcv.nuscenes.utils.splits import create_splits_scenes
 
 
 class TestMain(unittest.TestCase):

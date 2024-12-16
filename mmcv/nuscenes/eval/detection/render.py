@@ -7,15 +7,15 @@ from typing import Any
 import numpy as np
 from matplotlib import pyplot as plt
 
-from nuscenes import NuScenes
-from nuscenes.eval.common.data_classes import EvalBoxes
-from nuscenes.eval.common.render import setup_axis
-from nuscenes.eval.common.utils import boxes_to_sensor
-from nuscenes.eval.detection.constants import TP_METRICS, DETECTION_NAMES, DETECTION_COLORS, TP_METRICS_UNITS, \
+from mmcv.nuscenes import NuScenes
+from mmcv.nuscenes.eval.common.data_classes import EvalBoxes
+from mmcv.nuscenes.eval.common.render import setup_axis
+from mmcv.nuscenes.eval.common.utils import boxes_to_sensor
+from mmcv.nuscenes.eval.detection.constants import TP_METRICS, DETECTION_NAMES, DETECTION_COLORS, TP_METRICS_UNITS, \
     PRETTY_DETECTION_NAMES, PRETTY_TP_METRICS
-from nuscenes.eval.detection.data_classes import DetectionMetrics, DetectionMetricData, DetectionMetricDataList
-from nuscenes.utils.data_classes import LidarPointCloud
-from nuscenes.utils.geometry_utils import view_points
+from mmcv.nuscenes.eval.detection.data_classes import DetectionMetrics, DetectionMetricData, DetectionMetricDataList
+from mmcv.nuscenes.utils.data_classes import LidarPointCloud
+from mmcv.nuscenes.utils.geometry_utils import view_points
 
 Axis = Any
 

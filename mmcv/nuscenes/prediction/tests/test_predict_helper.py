@@ -7,8 +7,8 @@ from typing import Any, Dict, List, Tuple
 
 import numpy as np
 
-from nuscenes.nuscenes import NuScenes
-from nuscenes.prediction import PredictHelper, convert_global_coords_to_local
+from mmcv.nuscenes.nuscenes import NuScenes
+from mmcv.nuscenes.prediction import PredictHelper, convert_global_coords_to_local
 
 
 class MockNuScenes(NuScenes):

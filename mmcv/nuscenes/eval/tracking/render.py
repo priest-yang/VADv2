@@ -9,10 +9,10 @@ import numpy as np
 from pandas import DataFrame
 from pyquaternion import Quaternion
 
-from nuscenes.eval.common.render import setup_axis
-from nuscenes.eval.tracking.data_classes import TrackingBox, TrackingMetricDataList
-from nuscenes.utils.data_classes import Box
-from nuscenes.eval.tracking.data_classes import TrackingConfig
+from mmcv.nuscenes.eval.common.render import setup_axis
+from mmcv.nuscenes.eval.tracking.data_classes import TrackingBox, TrackingMetricDataList
+from mmcv.nuscenes.utils.data_classes import Box
+from mmcv.nuscenes.eval.tracking.data_classes import TrackingConfig
 
 Axis = Any
 

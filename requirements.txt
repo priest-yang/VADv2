@@ -20,7 +20,7 @@ scikit-learn
 open3d
 networkx
 ipython
-opencv-python
+opencv-python==4.8.0.74
 seaborn
 numpy # In order to adapt numba
 # metric related
@@ -33,7 +33,7 @@ trimesh
 pytest
 pytest-cov
 pytest-runner
-yapf
+yapf==0.40.1
 flake8
 trimesh
 similaritymeasures

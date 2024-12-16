@@ -3,7 +3,7 @@
 
 from typing import Dict, List
 
-from nuscenes import NuScenes
+from mmcv.nuscenes import NuScenes
 
 train_detect = \
     ['scene-0001', 'scene-0002', 'scene-0041', 'scene-0042', 'scene-0043', 'scene-0044', 'scene-0045', 'scene-0046',

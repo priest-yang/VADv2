@@ -10,9 +10,9 @@ import matplotlib.pyplot as plt
 from matplotlib.axes import Axes
 from matplotlib.collections import LineCollection
 from pyquaternion import Quaternion
-from nuscenes.utils.geometry_utils import view_points
-from nuscenes.eval.common.data_classes import EvalBox
-from nuscenes.eval.detection.constants import DETECTION_NAMES, ATTRIBUTE_NAMES
+from mmcv.nuscenes.utils.geometry_utils import view_points
+from mmcv.nuscenes.eval.common.data_classes import EvalBox
+from mmcv.nuscenes.eval.detection.constants import DETECTION_NAMES, ATTRIBUTE_NAMES
 
 
 def color_map(data, cmap):

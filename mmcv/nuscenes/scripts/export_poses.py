@@ -14,7 +14,7 @@ from typing import List, Tuple, Dict
 
 from tqdm import tqdm
 
-from nuscenes.nuscenes import NuScenes
+from mmcv.nuscenes.nuscenes import NuScenes
 
 
 EARTH_RADIUS_METERS = 6.378137e6

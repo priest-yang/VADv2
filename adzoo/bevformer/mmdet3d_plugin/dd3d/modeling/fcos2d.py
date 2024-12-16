@@ -12,9 +12,9 @@ from torch import distributed as dist
 from mmcv.utils import force_fp32
 from mmcv.layers import Conv2d, batched_nms, cat, get_norm
 
-from adbase.bevformer.mmdet3d_plugin.dd3d.layers.iou_loss import IOULoss
-from adbase.bevformer.mmdet3d_plugin.dd3d.layers.normalization import ModuleListDial, Scale
-from adbase.bevformer.mmdet3d_plugin.dd3d.utils.comm import reduce_sum
+from adzoo.bevformer.mmdet3d_plugin.dd3d.layers.iou_loss import IOULoss
+from adzoo.bevformer.mmdet3d_plugin.dd3d.layers.normalization import ModuleListDial, Scale
+from adzoo.bevformer.mmdet3d_plugin.dd3d.utils.comm import reduce_sum
 
 INF = 100000000
 

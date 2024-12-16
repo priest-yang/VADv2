@@ -8,14 +8,14 @@ import numpy as np
 import tqdm
 from pyquaternion import Quaternion
 
-from nuscenes import NuScenes
-from nuscenes.eval.common.data_classes import EvalBoxes
-from nuscenes.eval.detection.data_classes import DetectionBox
-from nuscenes.eval.detection.utils import category_to_detection_name
-from nuscenes.eval.tracking.data_classes import TrackingBox
-from nuscenes.utils.data_classes import Box
-from nuscenes.utils.geometry_utils import points_in_box
-from nuscenes.utils.splits import create_splits_scenes
+from mmcv.nuscenes import NuScenes
+from mmcv.nuscenes.eval.common.data_classes import EvalBoxes
+from mmcv.nuscenes.eval.detection.data_classes import DetectionBox
+from mmcv.nuscenes.eval.detection.utils import category_to_detection_name
+from mmcv.nuscenes.eval.tracking.data_classes import TrackingBox
+from mmcv.nuscenes.utils.data_classes import Box
+from mmcv.nuscenes.utils.geometry_utils import points_in_box
+from mmcv.nuscenes.utils.splits import create_splits_scenes
 
 
 def load_prediction(result_path: str, max_boxes_per_sample: int, box_cls, verbose: bool = False) \
@@ -148,7 +148,7 @@ def load_gt(nusc: NuScenes, eval_split: str, box_cls, verbose: bool = False) -> 
 
                 # Get label name in detection task and filter unused labels.
                 # Import locally to avoid errors when motmetrics package is not installed.
-                from nuscenes.eval.tracking.utils import category_to_tracking_name
+                from mmcv.nuscenes.eval.tracking.utils import category_to_tracking_name
                 tracking_name = category_to_tracking_name(sample_annotation['category_name'])
                 if tracking_name is None:
                     continue

@@ -1,8 +1,8 @@
 from typing import Dict, List, Tuple
 
 import numpy as np
-from nuscenes import NuScenes
-from nuscenes.utils.splits import create_splits_scenes
+from mmcv.nuscenes import NuScenes
+from mmcv.nuscenes.utils.splits import create_splits_scenes
 
 
 class ConfusionMatrix:

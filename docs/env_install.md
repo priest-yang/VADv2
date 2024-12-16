@@ -40,6 +40,8 @@ After installing in `/usr/local`, you need to add the CUDA-related paths to the 
 
 ## Create a Virtual Environment
 
+Assume install `virtualenvwrapper` first
+
 ```bash
 mkvirtualenv vadv2  --python=python3.8
 ```

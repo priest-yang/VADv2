@@ -9,6 +9,7 @@ from torch.utils.cpp_extension import BuildExtension, CppExtension, CUDAExtensio
 
 EXT_TYPE = 'pytorch'
 cmd_class = {'build_ext': BuildExtension}
+cur_path = os.path.dirname(os.path.abspath(__file__))
 
 def make_cuda_ext(name,
                   module,
@@ -186,7 +187,7 @@ setup(
     packages=[
         *find_packages(include=('mmcv', "mmcv.*")), 
         *find_packages(include=('adzoo', "adzoo.*")), 
-        *find_packages(where="./mmcv/", include=('nuscenes', "nuscenes.*"))
+        *find_packages(where=".mmcv", include=('nuscenes', "nuscenes.*"))
     ],
     include_package_data=True,
     classifiers=[

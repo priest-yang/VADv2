@@ -14,10 +14,10 @@ from shutil import copyfile
 import numpy as np
 from tqdm import tqdm
 
-from nuscenes.nuscenes import NuScenes
-from nuscenes.panoptic.panoptic_utils import STUFF_START_CLASS_ID
-from nuscenes.utils.data_classes import LidarSegPointCloud
-from nuscenes.utils.geometry_utils import points_in_box
+from mmcv.nuscenes.nuscenes import NuScenes
+from mmcv.nuscenes.panoptic.panoptic_utils import STUFF_START_CLASS_ID
+from mmcv.nuscenes.utils.data_classes import LidarSegPointCloud
+from mmcv.nuscenes.utils.geometry_utils import points_in_box
 
 
 def generate_panoptic_labels(nusc: NuScenes, out_dir: str, verbose: bool = False) -> None:

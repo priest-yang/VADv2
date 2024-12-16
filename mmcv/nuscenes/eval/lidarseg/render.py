@@ -8,11 +8,11 @@ from matplotlib import gridspec
 import numpy as np
 from tqdm import tqdm
 
-from nuscenes import NuScenes
-from nuscenes.eval.lidarseg.evaluate import LidarSegEval
-from nuscenes.eval.lidarseg.utils import ConfusionMatrix, LidarsegClassMapper
-from nuscenes.lidarseg.lidarseg_utils import colormap_to_colors
-from nuscenes.utils.data_classes import LidarSegPointCloud
+from mmcv.nuscenes import NuScenes
+from mmcv.nuscenes.eval.lidarseg.evaluate import LidarSegEval
+from mmcv.nuscenes.eval.lidarseg.utils import ConfusionMatrix, LidarsegClassMapper
+from mmcv.nuscenes.lidarseg.lidarseg_utils import colormap_to_colors
+from mmcv.nuscenes.utils.data_classes import LidarSegPointCloud
 
 
 class LidarSegEvalStratified(LidarSegEval):

@@ -1,11 +1,11 @@
 import numpy as np
-from nuscenes.prediction import (PredictHelper,
+from mmcv.nuscenes.prediction import (PredictHelper,
                                  convert_local_coords_to_global,
                                  convert_global_coords_to_local)
 from mmcv.core.bbox.structures.box_3d_mode import Box3DMode
 from mmcv.core.bbox.structures.coord_3d_mode import Coord3DMode
 from mmcv.core.bbox.structures.lidar_box3d import LiDARInstance3DBoxes
-from nuscenes.eval.common.utils import quaternion_yaw, Quaternion
+from mmcv.nuscenes.eval.common.utils import quaternion_yaw, Quaternion
 from mmcv.parallel import DataContainer as DC
 from mmcv.datasets.pipelines import to_tensor
 

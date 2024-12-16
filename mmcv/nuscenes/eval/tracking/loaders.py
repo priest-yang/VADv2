@@ -8,10 +8,10 @@ from typing import List, Dict, DefaultDict
 import numpy as np
 from pyquaternion import Quaternion
 
-from nuscenes.eval.common.data_classes import EvalBoxes
-from nuscenes.eval.tracking.data_classes import TrackingBox
-from nuscenes.nuscenes import NuScenes
-from nuscenes.utils.splits import create_splits_scenes
+from mmcv.nuscenes.eval.common.data_classes import EvalBoxes
+from mmcv.nuscenes.eval.tracking.data_classes import TrackingBox
+from mmcv.nuscenes.nuscenes import NuScenes
+from mmcv.nuscenes.utils.splits import create_splits_scenes
 
 
 def interpolate_tracking_boxes(left_box: TrackingBox, right_box: TrackingBox, right_ratio: float) -> TrackingBox:

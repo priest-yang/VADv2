@@ -14,7 +14,7 @@ from .fcos3d import FCOS3DHead, FCOS3DInference, FCOS3DLoss
 from .prepare_targets import DD3DTargetPreparer
 #from tridet.modeling.feature_extractor import build_feature_extractor
 from ..structures.image_list import ImageList
-from adbase.bevformer.mmdet3d_plugin.dd3d.utils.tensor2d import compute_features_locations as compute_locations_per_level
+from adzoo.bevformer.mmdet3d_plugin.dd3d.utils.tensor2d import compute_features_locations as compute_locations_per_level
 
 
 #@META_ARCH_REGISTRY.register()

@@ -25,7 +25,7 @@ import time
 import os.path as osp
 from mmcv.datasets import build_dataloader
 from mmcv.core.evaluation.eval_hooks import CustomDistEvalHook
-from adbase.bevformer.apis.test import custom_multi_gpu_test
+from adzoo.bevformer.apis.test import custom_multi_gpu_test
 
 def custom_train_detector(model,
                    dataset,

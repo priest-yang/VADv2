@@ -5,9 +5,9 @@ from typing import Any, Dict, List, Tuple
 
 import numpy as np
 
-from nuscenes.eval.common.data_classes import MetricData, EvalBox
-from nuscenes.eval.common.utils import center_distance
-from nuscenes.eval.tracking.constants import TRACKING_METRICS, AMOT_METRICS
+from mmcv.nuscenes.eval.common.data_classes import MetricData, EvalBox
+from mmcv.nuscenes.eval.common.utils import center_distance
+from mmcv.nuscenes.eval.tracking.constants import TRACKING_METRICS, AMOT_METRICS
 
 
 TRACKING_NAMES = []

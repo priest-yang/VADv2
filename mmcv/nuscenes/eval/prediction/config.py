@@ -4,8 +4,8 @@ import json
 import os
 from typing import List, Dict, Any
 
-from nuscenes.eval.prediction.metrics import Metric, deserialize_metric
-from nuscenes.prediction import PredictHelper
+from mmcv.nuscenes.eval.prediction.metrics import Metric, deserialize_metric
+from mmcv.nuscenes.prediction import PredictHelper
 
 
 class PredictionConfig:

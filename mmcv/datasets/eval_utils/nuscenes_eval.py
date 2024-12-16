@@ -9,21 +9,21 @@ import tqdm
 from matplotlib import pyplot as plt
 from pyquaternion import Quaternion
 
-from nuscenes import NuScenes
-from nuscenes.eval.common.config import config_factory
-from nuscenes.eval.common.data_classes import EvalBoxes
-from nuscenes.eval.common.loaders import load_prediction, load_gt, add_center_dist, filter_eval_boxes
-from nuscenes.eval.common.render import setup_axis
-from nuscenes.eval.detection.algo import accumulate, calc_ap, calc_tp
-from nuscenes.eval.detection.constants import TP_METRICS, TP_METRICS_UNITS, PRETTY_DETECTION_NAMES, PRETTY_TP_METRICS
-from nuscenes.eval.detection.data_classes import DetectionConfig, DetectionMetrics, DetectionBox, DetectionMetricDataList
-from nuscenes.eval.detection.evaluate import NuScenesEval
-from nuscenes.eval.detection.render import summary_plot, class_pr_curve, dist_pr_curve
-from nuscenes.eval.tracking.data_classes import TrackingBox
-from nuscenes.utils.data_classes import Box
-from nuscenes.utils.geometry_utils import view_points, BoxVisibility
-from nuscenes.utils.splits import create_splits_scenes
-from nuscenes.eval.detection.utils import category_to_detection_name
+from mmcv.nuscenes import NuScenes
+from mmcv.nuscenes.eval.common.config import config_factory
+from mmcv.nuscenes.eval.common.data_classes import EvalBoxes
+from mmcv.nuscenes.eval.common.loaders import load_prediction, load_gt, add_center_dist, filter_eval_boxes
+from mmcv.nuscenes.eval.common.render import setup_axis
+from mmcv.nuscenes.eval.detection.algo import accumulate, calc_ap, calc_tp
+from mmcv.nuscenes.eval.detection.constants import TP_METRICS, TP_METRICS_UNITS, PRETTY_DETECTION_NAMES, PRETTY_TP_METRICS
+from mmcv.nuscenes.eval.detection.data_classes import DetectionConfig, DetectionMetrics, DetectionBox, DetectionMetricDataList
+from mmcv.nuscenes.eval.detection.evaluate import NuScenesEval
+from mmcv.nuscenes.eval.detection.render import summary_plot, class_pr_curve, dist_pr_curve
+from mmcv.nuscenes.eval.tracking.data_classes import TrackingBox
+from mmcv.nuscenes.utils.data_classes import Box
+from mmcv.nuscenes.utils.geometry_utils import view_points, BoxVisibility
+from mmcv.nuscenes.utils.splits import create_splits_scenes
+from mmcv.nuscenes.eval.detection.utils import category_to_detection_name
 
 
 Axis = Any

@@ -6,7 +6,7 @@ from typing import List
 import cv2
 import numpy as np
 
-from nuscenes.prediction.input_representation.interface import Combinator
+from mmcv.nuscenes.prediction.input_representation.interface import Combinator
 
 
 def add_foreground_to_image(base_image: np.ndarray,

@@ -8,10 +8,10 @@ from typing import List, Dict, Any
 
 import numpy as np
 
-from nuscenes import NuScenes
-from nuscenes.eval.prediction.config import PredictionConfig, load_prediction_config
-from nuscenes.eval.prediction.data_classes import Prediction
-from nuscenes.prediction import PredictHelper
+from mmcv.nuscenes import NuScenes
+from mmcv.nuscenes.eval.prediction.config import PredictionConfig, load_prediction_config
+from mmcv.nuscenes.eval.prediction.data_classes import Prediction
+from mmcv.nuscenes.prediction import PredictHelper
 
 
 def compute_metrics(predictions: List[Dict[str, Any]],

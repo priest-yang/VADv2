@@ -8,7 +8,7 @@ Exports a video of each scene (with annotations) to disk.
 import argparse
 import os
 
-from nuscenes import NuScenes
+from mmcv.nuscenes import NuScenes
 
 
 def export_videos(nusc: NuScenes, out_dir: str):

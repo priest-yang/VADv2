@@ -13,29 +13,29 @@ from mmcv.fileio.io import dump,load
 from torchvision.transforms.functional import rotate
 import numpy as np
 from pyquaternion import Quaternion
-from nuscenes import NuScenes
-from nuscenes.eval.common.config import config_factory
-from nuscenes.eval.common.data_classes import EvalBoxes
-from nuscenes.eval.detection.data_classes import DetectionConfig
-from nuscenes.eval.detection.evaluate import NuScenesEval
-from nuscenes.eval.detection.data_classes import DetectionBox
-from nuscenes.eval.detection.utils import category_to_detection_name
-from nuscenes.eval.tracking.data_classes import TrackingBox
-from nuscenes.utils.data_classes import Box
-from nuscenes.utils.splits import create_splits_scenes
-from nuscenes.utils.geometry_utils import view_points, box_in_image, BoxVisibility, transform_matrix
+from mmcv.nuscenes import NuScenes
+from mmcv.nuscenes.eval.common.config import config_factory
+from mmcv.nuscenes.eval.common.data_classes import EvalBoxes
+from mmcv.nuscenes.eval.detection.data_classes import DetectionConfig
+from mmcv.nuscenes.eval.detection.evaluate import NuScenesEval
+from mmcv.nuscenes.eval.detection.data_classes import DetectionBox
+from mmcv.nuscenes.eval.detection.utils import category_to_detection_name
+from mmcv.nuscenes.eval.tracking.data_classes import TrackingBox
+from mmcv.nuscenes.utils.data_classes import Box
+from mmcv.nuscenes.utils.splits import create_splits_scenes
+from mmcv.nuscenes.utils.geometry_utils import view_points, box_in_image, BoxVisibility, transform_matrix
 import pycocotools.mask as mask_util
 # from projects.mmdet3d_plugin.models.utils.visual import save_tensor
-from nuscenes.eval.common.loaders import load_gt, add_center_dist, filter_eval_boxes
-from nuscenes.eval.detection.algo import accumulate, calc_ap, calc_tp
-from nuscenes.eval.detection.data_classes import DetectionConfig, DetectionMetrics, DetectionBox, \
+from mmcv.nuscenes.eval.common.loaders import load_gt, add_center_dist, filter_eval_boxes
+from mmcv.nuscenes.eval.detection.algo import accumulate, calc_ap, calc_tp
+from mmcv.nuscenes.eval.detection.data_classes import DetectionConfig, DetectionMetrics, DetectionBox, \
     DetectionMetricDataList
-from nuscenes.eval.detection.render import summary_plot, class_pr_curve, dist_pr_curve, visualize_sample
+from mmcv.nuscenes.eval.detection.render import summary_plot, class_pr_curve, dist_pr_curve, visualize_sample
 from matplotlib import pyplot as plt
-from nuscenes.eval.common.render import setup_axis
-from nuscenes.eval.detection.constants import TP_METRICS, DETECTION_NAMES, DETECTION_COLORS, TP_METRICS_UNITS, \
+from mmcv.nuscenes.eval.common.render import setup_axis
+from mmcv.nuscenes.eval.detection.constants import TP_METRICS, DETECTION_NAMES, DETECTION_COLORS, TP_METRICS_UNITS, \
     PRETTY_DETECTION_NAMES, PRETTY_TP_METRICS
-from nuscenes.eval.detection.data_classes import DetectionMetrics, DetectionMetricData, DetectionMetricDataList
+from mmcv.nuscenes.eval.detection.data_classes import DetectionMetrics, DetectionMetricData, DetectionMetricDataList
 import mmcv
 
 

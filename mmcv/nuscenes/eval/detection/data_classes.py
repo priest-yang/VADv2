@@ -6,9 +6,9 @@ from typing import List, Dict, Tuple
 
 import numpy as np
 
-from nuscenes.eval.common.data_classes import MetricData, EvalBox
-from nuscenes.eval.common.utils import center_distance
-from nuscenes.eval.detection.constants import DETECTION_NAMES, ATTRIBUTE_NAMES, TP_METRICS
+from mmcv.nuscenes.eval.common.data_classes import MetricData, EvalBox
+from mmcv.nuscenes.eval.common.utils import center_distance
+from mmcv.nuscenes.eval.detection.constants import DETECTION_NAMES, ATTRIBUTE_NAMES, TP_METRICS
 
 
 class DetectionConfig:

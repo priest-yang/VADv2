@@ -6,19 +6,19 @@ import time
 from typing import Tuple, Dict, Any
 import numpy as np
 
-from nuscenes import NuScenes
-from nuscenes.eval.common.config import config_factory
-from nuscenes.eval.common.data_classes import EvalBoxes
-from nuscenes.eval.detection.data_classes import DetectionConfig
-from nuscenes.eval.detection.evaluate import NuScenesEval
+from mmcv.nuscenes import NuScenes
+from mmcv.nuscenes.eval.common.config import config_factory
+from mmcv.nuscenes.eval.common.data_classes import EvalBoxes
+from mmcv.nuscenes.eval.detection.data_classes import DetectionConfig
+from mmcv.nuscenes.eval.detection.evaluate import NuScenesEval
 from pyquaternion import Quaternion
 
-from nuscenes import NuScenes
-from nuscenes.eval.common.data_classes import EvalBoxes
-from nuscenes.utils.data_classes import Box
-from nuscenes.eval.common.loaders import add_center_dist, filter_eval_boxes
+from mmcv.nuscenes import NuScenes
+from mmcv.nuscenes.eval.common.data_classes import EvalBoxes
+from mmcv.nuscenes.utils.data_classes import Box
+from mmcv.nuscenes.eval.common.loaders import add_center_dist, filter_eval_boxes
 import tqdm
-from nuscenes.utils.geometry_utils import view_points, BoxVisibility
+from mmcv.nuscenes.utils.geometry_utils import view_points, BoxVisibility
 import pycocotools.mask as mask_util
 import argparse
 import json
@@ -29,16 +29,16 @@ from typing import Tuple, Dict, Any
 
 import numpy as np
 
-from nuscenes import NuScenes
-from nuscenes.eval.common.config import config_factory
-from nuscenes.eval.common.data_classes import EvalBoxes
-from nuscenes.eval.common.loaders import add_center_dist, filter_eval_boxes
-from nuscenes.eval.detection.algo import calc_ap, calc_tp
-from nuscenes.eval.detection.constants import TP_METRICS
-from nuscenes.eval.detection.data_classes import DetectionConfig, DetectionMetrics, DetectionBox, \
+from mmcv.nuscenes import NuScenes
+from mmcv.nuscenes.eval.common.config import config_factory
+from mmcv.nuscenes.eval.common.data_classes import EvalBoxes
+from mmcv.nuscenes.eval.common.loaders import add_center_dist, filter_eval_boxes
+from mmcv.nuscenes.eval.detection.algo import calc_ap, calc_tp
+from mmcv.nuscenes.eval.detection.constants import TP_METRICS
+from mmcv.nuscenes.eval.detection.data_classes import DetectionConfig, DetectionMetrics, DetectionBox, \
     DetectionMetricDataList
-from nuscenes.eval.detection.render import summary_plot, class_pr_curve, dist_pr_curve, visualize_sample
-from nuscenes.eval.common.utils import quaternion_yaw, Quaternion
+from mmcv.nuscenes.eval.detection.render import summary_plot, class_pr_curve, dist_pr_curve, visualize_sample
+from mmcv.nuscenes.eval.common.utils import quaternion_yaw, Quaternion
 from mmcv.core.bbox.iou_calculators import BboxOverlaps3D
 from IPython import embed
 import json
@@ -47,15 +47,15 @@ from typing import Any
 import numpy as np
 from matplotlib import pyplot as plt
 
-from nuscenes import NuScenes
-from nuscenes.eval.common.data_classes import EvalBoxes
-from nuscenes.eval.common.render import setup_axis
-from nuscenes.eval.common.utils import boxes_to_sensor
-from nuscenes.eval.detection.constants import TP_METRICS, DETECTION_NAMES, DETECTION_COLORS, TP_METRICS_UNITS, \
+from mmcv.nuscenes import NuScenes
+from mmcv.nuscenes.eval.common.data_classes import EvalBoxes
+from mmcv.nuscenes.eval.common.render import setup_axis
+from mmcv.nuscenes.eval.common.utils import boxes_to_sensor
+from mmcv.nuscenes.eval.detection.constants import TP_METRICS, DETECTION_NAMES, DETECTION_COLORS, TP_METRICS_UNITS, \
     PRETTY_DETECTION_NAMES, PRETTY_TP_METRICS
-from nuscenes.eval.detection.data_classes import DetectionMetrics, DetectionMetricData, DetectionMetricDataList
-from nuscenes.utils.data_classes import LidarPointCloud
-from nuscenes.utils.geometry_utils import view_points
+from mmcv.nuscenes.eval.detection.data_classes import DetectionMetrics, DetectionMetricData, DetectionMetricDataList
+from mmcv.nuscenes.utils.data_classes import LidarPointCloud
+from mmcv.nuscenes.utils.geometry_utils import view_points
 from .eval_utils import load_prediction, load_gt, accumulate, accumulate_motion, \
     DetectionMotionBox, DetectionMotionBox_modified, DetectionMotionMetricData, \
     DetectionMotionMetrics, DetectionMotionMetricDataList

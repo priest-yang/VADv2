@@ -5,7 +5,7 @@ from typing import Tuple
 import cv2
 import numpy as np
 
-from nuscenes.prediction.helper import angle_of_rotation
+from mmcv.nuscenes.prediction.helper import angle_of_rotation
 
 
 def convert_to_pixel_coords(location: Tuple[float, float],

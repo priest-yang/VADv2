@@ -7,7 +7,7 @@ import cv2
 import copy
 import matplotlib.pyplot as plt
 from skimage.draw import polygon
-from nuscenes.utils.data_classes import Box
+from mmcv.nuscenes.utils.data_classes import Box
 from scipy.spatial.transform import Rotation as R
 
 ego_width, ego_length = 1.85, 4.084

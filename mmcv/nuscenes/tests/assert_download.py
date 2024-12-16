@@ -6,7 +6,7 @@ import os
 
 from tqdm import tqdm
 
-from nuscenes import NuScenes
+from mmcv.nuscenes import NuScenes
 
 
 def verify_setup(nusc: NuScenes):

@@ -5,9 +5,9 @@ from collections import defaultdict
 import matplotlib.pyplot as plt
 import tqdm
 
-from nuscenes.map_expansion.map_api import NuScenesMap, locations
-from nuscenes.map_expansion.utils import get_egoposes_on_drivable_ratio, get_disconnected_lanes
-from nuscenes.nuscenes import NuScenes
+from mmcv.nuscenes.map_expansion.map_api import NuScenesMap, locations
+from mmcv.nuscenes.map_expansion.utils import get_egoposes_on_drivable_ratio, get_disconnected_lanes
+from mmcv.nuscenes.nuscenes import NuScenes
 
 
 class TestAllMaps(unittest.TestCase):

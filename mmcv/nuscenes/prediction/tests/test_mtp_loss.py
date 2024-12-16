@@ -7,7 +7,7 @@ try:
 except ModuleNotFoundError:
     raise unittest.SkipTest('Skipping test as torch was not found!')
 
-from nuscenes.prediction.models import mtp
+from mmcv.nuscenes.prediction.models import mtp
 
 
 class TestMTPLoss(unittest.TestCase):

@@ -7,10 +7,10 @@ from typing import List, Dict, Any, Tuple
 import numpy as np
 from scipy import interpolate
 
-from nuscenes.eval.prediction.data_classes import Prediction
-from nuscenes.map_expansion.map_api import NuScenesMap
-from nuscenes.prediction import PredictHelper
-from nuscenes.prediction.input_representation.static_layers import load_all_maps
+from mmcv.nuscenes.eval.prediction.data_classes import Prediction
+from mmcv.nuscenes.map_expansion.map_api import NuScenesMap
+from mmcv.nuscenes.prediction import PredictHelper
+from mmcv.nuscenes.prediction.input_representation.static_layers import load_all_maps
 
 
 def returns_2d_array(function):

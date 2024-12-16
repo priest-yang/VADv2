@@ -23,11 +23,11 @@ try:
 except ModuleNotFoundError:
     raise unittest.SkipTest('Skipping test as pandas was not found!')
 
-from nuscenes.eval.tracking.constants import MOT_METRIC_MAP, TRACKING_METRICS
-from nuscenes.eval.tracking.data_classes import TrackingBox, TrackingMetricData
-from nuscenes.eval.tracking.mot import MOTAccumulatorCustom
-from nuscenes.eval.tracking.render import TrackingRenderer
-from nuscenes.eval.tracking.utils import print_threshold_metrics, create_motmetrics
+from mmcv.nuscenes.eval.tracking.constants import MOT_METRIC_MAP, TRACKING_METRICS
+from mmcv.nuscenes.eval.tracking.data_classes import TrackingBox, TrackingMetricData
+from mmcv.nuscenes.eval.tracking.mot import MOTAccumulatorCustom
+from mmcv.nuscenes.eval.tracking.render import TrackingRenderer
+from mmcv.nuscenes.eval.tracking.utils import print_threshold_metrics, create_motmetrics
 
 
 class TrackingEvaluation(object):

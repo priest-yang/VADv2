@@ -7,9 +7,9 @@ from mmcv.layers import Conv2d, batched_nms, cat, get_norm
 from mmcv.utils import force_fp32
 
 from .disentangled_box3d_loss import DisentangledBox3DLoss
-from adbase.bevformer.mmdet3d_plugin.dd3d.layers.normalization import ModuleListDial, Offset, Scale
-from adbase.bevformer.mmdet3d_plugin.dd3d.structures.boxes3d import Boxes3D
-from adbase.bevformer.mmdet3d_plugin.dd3d.utils.geometry import allocentric_to_egocentric, unproject_points2d
+from adzoo.bevformer.mmdet3d_plugin.dd3d.layers.normalization import ModuleListDial, Offset, Scale
+from adzoo.bevformer.mmdet3d_plugin.dd3d.structures.boxes3d import Boxes3D
+from adzoo.bevformer.mmdet3d_plugin.dd3d.utils.geometry import allocentric_to_egocentric, unproject_points2d
 
 EPS = 1e-7
 

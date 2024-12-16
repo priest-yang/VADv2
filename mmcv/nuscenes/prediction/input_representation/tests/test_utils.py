@@ -1,6 +1,6 @@
 import unittest
 
-from nuscenes.prediction.input_representation import utils
+from mmcv.nuscenes.prediction.input_representation import utils
 
 
 class Test_convert_to_pixel_coords(unittest.TestCase):

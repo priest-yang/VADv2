@@ -1,7 +1,7 @@
 import math
 import numpy as np
-from nuscenes.eval.common.utils import quaternion_yaw, Quaternion
-from nuscenes.utils.data_classes import Box as NuScenesBox
+from mmcv.nuscenes.eval.common.utils import quaternion_yaw, Quaternion
+from mmcv.nuscenes.utils.data_classes import Box as NuScenesBox
 import pyquaternion
 
 

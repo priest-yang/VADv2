@@ -3,7 +3,7 @@ import torch
 
 from mmcv.layers import cat
 
-from adbase.bevformer.mmdet3d_plugin.dd3d.structures.boxes3d import Boxes3D
+from adzoo.bevformer.mmdet3d_plugin.dd3d.structures.boxes3d import Boxes3D
 
 INF = 100000000.
 

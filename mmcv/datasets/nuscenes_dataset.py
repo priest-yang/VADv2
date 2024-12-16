@@ -2,7 +2,7 @@
 import numpy as np
 import pyquaternion
 import tempfile
-from nuscenes.utils.data_classes import Box as NuScenesBox
+from mmcv.nuscenes.utils.data_classes import Box as NuScenesBox
 from os import path as osp
 
 from mmcv.datasets import DATASETS
@@ -141,7 +141,7 @@ class NuScenesDataset(Custom3DDataset):
 
         self.with_velocity = with_velocity
         self.eval_version = eval_version
-        from nuscenes.eval.detection.config import config_factory
+        from mmcv.nuscenes.eval.detection.config import config_factory
         self.eval_detection_configs = config_factory(self.eval_version)
         # self.eval_detection_configs.class_names = list(self.eval_detection_configs.class_names)
         if self.modality is None:
@@ -394,8 +394,8 @@ class NuScenesDataset(Custom3DDataset):
         Returns:
             dict: Dictionary of evaluation details.
         """
-        from nuscenes import NuScenes
-        from nuscenes.eval.detection.evaluate import NuScenesEval
+        from mmcv.nuscenes import NuScenes
+        from mmcv.nuscenes.eval.detection.evaluate import NuScenesEval
 
         output_dir = osp.join(*osp.split(result_path)[:-1])
         nusc = NuScenes(

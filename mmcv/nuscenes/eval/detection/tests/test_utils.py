@@ -7,9 +7,9 @@ import numpy as np
 from numpy.testing import assert_array_almost_equal
 from pyquaternion import Quaternion
 
-from nuscenes.eval.common.utils import attr_acc, scale_iou, yaw_diff, angle_diff, center_distance, velocity_l2, \
+from mmcv.nuscenes.eval.common.utils import attr_acc, scale_iou, yaw_diff, angle_diff, center_distance, velocity_l2, \
     cummean
-from nuscenes.eval.detection.data_classes import DetectionBox
+from mmcv.nuscenes.eval.detection.data_classes import DetectionBox
 
 
 class TestEval(unittest.TestCase):

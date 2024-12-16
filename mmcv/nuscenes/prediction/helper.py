@@ -5,8 +5,8 @@ from typing import Dict, Tuple, Any, List, Callable, Union
 import numpy as np
 from pyquaternion import Quaternion
 
-from nuscenes import NuScenes
-from nuscenes.eval.common.utils import quaternion_yaw, angle_diff
+from mmcv.nuscenes import NuScenes
+from mmcv.nuscenes.eval.common.utils import quaternion_yaw, angle_diff
 
 MICROSECONDS_PER_SECOND = 1e6
 BUFFER = 0.15  # seconds

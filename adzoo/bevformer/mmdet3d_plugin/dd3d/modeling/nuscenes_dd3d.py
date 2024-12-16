@@ -10,12 +10,12 @@ from mmcv.utils import force_fp32
 from torch import distributed as dist
 from mmcv.modeling.postprocessing import detector_postprocess as resize_instances
 from mmcv.layers import cat, Conv2d
-from adbase.bevformer.mmdet3d_plugin.dd3d.datasets.nuscenes import MAX_NUM_ATTRIBUTES
+from adzoo.bevformer.mmdet3d_plugin.dd3d.datasets.nuscenes import MAX_NUM_ATTRIBUTES
 from .core import DD3D
 from .prepare_targets import DD3DTargetPreparer
-from adbase.bevformer.mmdet3d_plugin.dd3d.structures.boxes3d import Boxes3D
-from adbase.bevformer.mmdet3d_plugin.dd3d.structures.image_list import ImageList
-from adbase.bevformer.mmdet3d_plugin.dd3d.utils.comm import reduce_sum
+from adzoo.bevformer.mmdet3d_plugin.dd3d.structures.boxes3d import Boxes3D
+from adzoo.bevformer.mmdet3d_plugin.dd3d.structures.image_list import ImageList
+from adzoo.bevformer.mmdet3d_plugin.dd3d.utils.comm import reduce_sum
 
 INF = 100000000.
 

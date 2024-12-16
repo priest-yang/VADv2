@@ -10,9 +10,9 @@ import time
 from typing import List
 import zipfile
 
-from nuscenes.nuscenes import NuScenes
-from nuscenes.eval.panoptic.evaluate import NuScenesPanopticEval
-from nuscenes.eval.panoptic.get_panoptic_from_seg_det_or_track import generate_panoptic_labels
+from mmcv.nuscenes.nuscenes import NuScenes
+from mmcv.nuscenes.eval.panoptic.evaluate import NuScenesPanopticEval
+from mmcv.nuscenes.eval.panoptic.get_panoptic_from_seg_det_or_track import generate_panoptic_labels
 
 
 def prepare_files(method_names: List[str], root_dir: str) -> None:

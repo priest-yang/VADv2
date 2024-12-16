@@ -1,7 +1,7 @@
 import unittest
 import os
 
-from nuscenes import NuScenes
+from mmcv.nuscenes import NuScenes
 
 
 class TestNuScenesLidarseg(unittest.TestCase):

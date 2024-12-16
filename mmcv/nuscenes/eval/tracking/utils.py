@@ -13,8 +13,8 @@ try:
 except ModuleNotFoundError:
     raise unittest.SkipTest('Skipping test as motmetrics was not found!')
 
-from nuscenes.eval.tracking.data_classes import TrackingMetrics
-from nuscenes.eval.tracking.metrics import motar, mota_custom, motp_custom, faf, track_initialization_duration, \
+from mmcv.nuscenes.eval.tracking.data_classes import TrackingMetrics
+from mmcv.nuscenes.eval.tracking.metrics import motar, mota_custom, motp_custom, faf, track_initialization_duration, \
     longest_gap_duration, num_fragmentations_custom
 
 

@@ -6,7 +6,7 @@ import os
 from itertools import chain
 from typing import List
 
-from nuscenes.utils.splits import create_splits_scenes
+from mmcv.nuscenes.utils.splits import create_splits_scenes
 
 NUM_IN_TRAIN_VAL = 200
 

@@ -23,10 +23,10 @@ from shapely import affinity
 from shapely.geometry import Polygon, MultiPolygon, LineString, Point, box
 from tqdm import tqdm
 
-from nuscenes.map_expansion.arcline_path_utils import discretize_lane, ArcLinePath
-from nuscenes.map_expansion.bitmap import BitMap
-from nuscenes.nuscenes import NuScenes
-from nuscenes.utils.geometry_utils import view_points
+from mmcv.nuscenes.map_expansion.arcline_path_utils import discretize_lane, ArcLinePath
+from mmcv.nuscenes.map_expansion.bitmap import BitMap
+from mmcv.nuscenes.nuscenes import NuScenes
+from mmcv.nuscenes.utils.geometry_utils import view_points
 
 # Recommended style to use as the plots will show grids.
 # plt.style.use('seaborn-whitegrid')

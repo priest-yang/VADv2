@@ -15,7 +15,7 @@ from torch.nn.parallel.distributed import DistributedDataParallel
 from mmcv.datasets import build_dataset, build_dataloader, replace_ImageToTensor
 import time
 import os.path as osp
-from adbase.vad.apis.test import custom_multi_gpu_test, single_gpu_test
+from adzoo.vad.apis.test import custom_multi_gpu_test, single_gpu_test
 import numpy as np
 import json
 import warnings

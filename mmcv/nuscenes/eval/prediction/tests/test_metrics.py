@@ -4,10 +4,10 @@ from unittest.mock import MagicMock, patch
 
 import numpy as np
 
-from nuscenes import NuScenes
-from nuscenes.eval.prediction import metrics
-from nuscenes.eval.prediction.data_classes import Prediction
-from nuscenes.prediction import PredictHelper
+from mmcv.nuscenes import NuScenes
+from mmcv.nuscenes.eval.prediction import metrics
+from mmcv.nuscenes.eval.prediction.data_classes import Prediction
+from mmcv.nuscenes.prediction import PredictHelper
 
 
 class TestFunctions(unittest.TestCase):

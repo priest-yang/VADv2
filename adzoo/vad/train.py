@@ -24,7 +24,7 @@ from mmcv.utils import collect_env, get_root_logger
 from mmcv.utils import set_random_seed
 
 from mmcv.utils import TORCH_VERSION, digit_version
-from adbase.bevformer.mmdet3d_plugin.bevformer.apis.train import custom_train_model
+from adzoo.bevformer.mmdet3d_plugin.bevformer.apis.train import custom_train_model
 
 import cv2
 cv2.setNumThreads(1)
@@ -32,7 +32,7 @@ cv2.setNumThreads(1)
 import sys
 sys.path.append('')
 
-import deepspeed
+# import deepspeed
 
 import json
 
@@ -206,6 +206,7 @@ def main():
     model.init_weights()
 
     if args.deepspeed:
+        import deepspeed
         # 读取DeepSpeed配置
         with open(args.deepspeed_config, 'r') as f:
             ds_config = json.load(f)

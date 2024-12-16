@@ -6,7 +6,7 @@ import unittest
 import cv2
 import numpy as np
 
-from nuscenes.prediction.input_representation.combinators import Rasterizer
+from mmcv.nuscenes.prediction.input_representation.combinators import Rasterizer
 
 
 class TestRasterizer(unittest.TestCase):
