@@ -11,7 +11,70 @@ import seaborn as sns
 import pickle
 import joblib
 from sklearn.cluster import KMeans, MiniBatchKMeans
-from vlannotator.utils import prepare_future_trajectories_with_x_forward
+# from vlannotator.utils import prepare_future_trajectories_with_x_forward
+from pyquaternion import Quaternion
+import numpy.typing as npt
+
+
+def _restore_trajectory(trajectory_deltas: npt.NDArray[np.float32]) -> npt.NDArray[np.float32]:
+    """Restore the trajectory deltas to get the future trajectory."""
+    initial_position = trajectory_deltas[0]
+    recovered_ego_fut_trajs = np.vstack(
+        [initial_position, np.cumsum(trajectory_deltas, axis=0)]
+    )
+    return recovered_ego_fut_trajs
+
+def _transform_to_global(
+        points: npt.NDArray[np.float32],
+        x: float,
+        y: float,
+        z: float,
+        q: Quaternion,
+        inv: bool = False,
+        ) -> npt.NDArray[np.float32]:
+        
+    """Transform points to global coordinate frame."""
+    if inv:
+        return (points - np.array([x, y, z])) @ q.rotation_matrix
+    else:
+        return points @ q.rotation_matrix.T + np.array([x, y, z])
+    
+def prepare_future_trajectories_with_x_forward(key_frame_data, frame_idx: int) -> npt.NDArray[np.float32]:
+    """Prepare future trajectories for ego vehicle."""
+    ego_fut_trajs_restored = []
+    for future_offset in [0, 6, 12]:
+        future_idx = frame_idx + future_offset
+        scene_token = key_frame_data[frame_idx]["scene_token"]
+        if future_idx < len(key_frame_data):
+            future_data = key_frame_data[future_idx]
+            if future_data["scene_token"] != scene_token:
+                continue
+            trajectory_deltas = future_data["gt_ego_fut_trajs"]
+            future_positions = _restore_trajectory(trajectory_deltas)
+            x, y, z = future_data["can_bus"][0:3]
+            qx, qy, qz, qw = future_data["can_bus"][3:7]
+            q = Quaternion([qw, qx, qy, qz])
+            future_positions = np.c_[
+                future_positions, np.zeros(future_positions.shape[0])
+            ]
+            future_positions_global = _transform_to_global(
+                future_positions, x, y, z, q
+            )
+            ego_fut_trajs_restored.append(future_positions_global[1:, :])
+    # Transform to ego coordinate frame
+    x, y, z = key_frame_data[frame_idx]["can_bus"][0:3]
+    qx, qy, qz, qw = key_frame_data[frame_idx]["can_bus"][3:7]
+    q = Quaternion([qw, qx, qy, qz])
+    ego_future_positions = []
+    for traj in ego_fut_trajs_restored:
+        traj_in_ego = _transform_to_global(traj, x, y, z, q, inv=True)
+        # traj_in_ego = traj_in_ego @ np.array([[0, -1, 0], [-1, 0, 0], [0, 0, 1]]) # rotate 90 degrees, make y-axis the forward direction
+
+        ego_future_positions.append(traj_in_ego[:, :2])
+    if ego_future_positions:
+        return np.vstack(ego_future_positions)
+    else:
+        return np.zeros((2, 0))
 
 
 ANNOTATED_DATA_PATH = '/home/shaoze.yang/data/nuplan_to_vad/output/trainval_1010.pkl'
